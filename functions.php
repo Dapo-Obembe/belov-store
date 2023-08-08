@@ -1,7 +1,7 @@
 <?php
 /**
  * Declaring styles and scripts
- * @return 
+ * @return $parent
  */
 function Parent_styles()
 {
@@ -11,12 +11,12 @@ add_action('wp_enqueue_scripts', 'parent_styles');
 
 /**
  * Target Woocommerce Order Editing Area in the Admin Panel
- * @return $order
+ * @return $order-link
  */
-
- function add_a_link($order) {
+function Customer_Order_link($order)
+ {
         echo '<p>HELLO WORLD!!!</p>';
 }
-add_action('woocommerce_admin_order_data_after_order_details', 'add_a_link', 10, 1);
+add_action('woocommerce_admin_order_data_after_order_details', 'Customer_Order_link', 10, 1);
 
 
